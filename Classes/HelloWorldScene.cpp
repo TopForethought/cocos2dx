@@ -133,7 +133,7 @@ bool HelloWorld::init()
 	//addChild(clip);
 
 
-	// 瞄准镜
+	// 狙击镜的实现(4倍镜)
 	// 开 :使用大图
 	auto smallPic = Sprite::create("aim/forest512.jpg");
 	
@@ -163,7 +163,7 @@ bool HelloWorld::init()
 	clipBi->setAlphaThreshold(0.5);
 	clipBi->setInverted(false);
 	addChild(clipBi);
-	// 瞄准镜实现逻辑:  光标在小图上移动,将光标当前位置的小图截取使用大图截取的遮盖
+	// 瞄准镜实现逻辑:  光标在小图上移动,将光标当前位置的小图截取使用大图截取的图遮盖
 
 	auto listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
