@@ -181,9 +181,7 @@ bool HelloWorld::init()
 		aimAreaBi->setPosition(aimAreaBi->getPosition() + touch->getDelta());
 		
 		//aimAreaBi->setPosition(1,1);
-		
 		return true;
-
 
 	};
 	Director::getInstance()->getEventDispatcher()->
