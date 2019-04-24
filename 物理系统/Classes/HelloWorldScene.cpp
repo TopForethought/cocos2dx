@@ -11,7 +11,7 @@ Scene* HelloWorld::createScene()
 {
     // 'scene' is an autorelease object
     //auto scene = Scene::create();
-	// ´´½¨´øÎïÀíÌØĞÔµÄÊÀ½ç
+	// åˆ›å»ºå¸¦ç‰©ç†ç‰¹æ€§çš„ä¸–ç•Œ
 	auto  scene = Scene::createWithPhysics();
 	scene->getPhysicsWorld()->setGravity(Vec2(0, 0));
 	//scene->getPhysicsWorld()->setDebugDrawMask(PhysicsWorld::DEBUGDRAW_ALL);
@@ -29,58 +29,7 @@ Scene* HelloWorld::createScene()
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    /**  you can create scene with following comment code instead of using csb file.
-    // 1. super init first
-    if ( !Layer::init() )
-    {
-        return false;
-    }
-    
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
-    
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
-
-    // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    **/
+  
     
     //////////////////////////////
     // 1. super init first
@@ -97,156 +46,10 @@ bool HelloWorld::init()
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 
-	//  1.ÎÄ×Ö²Ëµ¥*****************************************************************
-	/*MenuItemFont::setFontName("Times New Rowman");
-	MenuItemFont::setFontSize(80);
 
-	MenuItem *item1 = MenuItemFont::create("Start",
-		[=](Ref * pSend) {log("Start"); }
-	);
-	MenuItem *item2 = MenuItemFont::create("Quit",
-		[=](Ref * pSend) {log("Quit"); }
-	);
-	auto menu = Menu::create(item1, item2, NULL);
-	menu->alignItemsVertically();
-	addChild(menu);*/
-	//2. checkbox ÀàĞÍ²Ëµ¥(¿ª¹Ø)
-	//auto lightOn = MenuItemImage::create("OnA.png", "OnA.png");
-	//auto lightOff = MenuItemImage::create("signalLight.png", "signalLight.png");
-	//auto onOffMenu = MenuItemToggle::createWithCallback([=](Ref * pSend) {
-	//	auto item = (MenuItemToggle*)pSend;
-	//	int index = item->getSelectedIndex();
-	//	if (1 == index) {
-	//		log("Light on");
-	//	}
-	//	else {
-	//		log("Light off");
-	//	}
-	//	//log("index:%d" , index);
-	//},lightOff,lightOn,NULL);
-	//auto menu = Menu::create(onOffMenu, NULL);
-	//menu->setPosition(Point(200, 200));
-	//addChild(menu, 2);
-
-
-	// 3, Í¼Æ¬²Ëµ¥*****************************************************************//
-	/*auto  mi1 = MenuItemImage::create("img1n.png", "img1s.png", "img1d.png",
-		[=](Ref * pSend){
-		log("IMG1 ok!");
-	});
-	mi1->setPosition(0, 100);
-	auto  mi2 = MenuItemImage::create("img2n.png", "img2s.png", "img2d.png",
-		[=](Ref * pSend) {
-		log("IMG2 ok!");
-	});
-
-	mi2->setPosition(0, 200);
-	auto menu = Menu::create(mi1, mi2, NULL);
-	addChild(menu, 2);*/
-	// 4 sprite ²Ëµ¥,¿ÉÒÔÉèÖÃ¶¯»­  *****************************************************************
-	//auto plane1N = Sprite::create("planen1.png");
-	//auto plane1S = Sprite::create("planeS1.png");
-	//auto plane1D = Sprite::create("planed1.png");
-	//auto plane2N = Sprite::create("planen2.png");
-	//auto plane2S = Sprite::create("planeS2.png");
-	//auto plane2D = Sprite::create("planed2.png");
-
-	//auto item1=MenuItemSprite::create(plane1N, plane1S, plane1D,
-	//	[=](Ref * pSend) {
-	//	log("sp ok");
-	//});
-	//
-	//auto menu = Menu::create(item1, NULL);
-	//addChild(menu);
-	//// ¼ÓÉÏ¶¯»­
-	//Vector<SpriteFrame *>framesN(2);
-	//framesN.pushBack(Sprite::create("planen1.png")->getSpriteFrame());
-	//framesN.pushBack(Sprite::create("planen2.png")->getSpriteFrame());
-	//Vector<SpriteFrame *>framesS(2);
-	//framesS.pushBack(Sprite::create("planeS1.png")->getSpriteFrame());
-	//framesS.pushBack(Sprite::create("planeS2.png")->getSpriteFrame());
-	//
-	//plane1N->runAction(RepeatForever::create(
-	//	Animate::create(Animation::createWithSpriteFrames(framesN, 0.07))));
-
-	//plane1S->runAction(RepeatForever::create(
-	//	Animate::create(Animation::createWithSpriteFrames(framesS, 0.07))));
-
-
-	// ²Ã¼ô½ÚµãÀà
-	// µ¯¿×Ğ§¹û
-	//auto clip = ClippingNode::create();// ²Ã¼ô½Úµã
-	//auto plate = Sprite::create("holes/ABCD.png");
-	//auto hole = Sprite::create("holes/Hole.png");
-	//auto point = Sprite::create("holes/Point.png");
-	//clip->setPosition(visibleSize / 2);
-	//clip->addChild(plate);
-	//clip->addChild(hole);
-
-	//clip->setStencil(point);//°´ÕÕpointµÄÄ£Ñù¿ÙÍ¼
-	//clip->setAlphaThreshold(0.5);
-	//clip->setInverted(true);
-	//addChild(clip);
-
-
-	// Ãé×¼¾µ ************************************************************8
-	// ¿ª :Ê¹ÓÃ´óÍ¼
-	//auto smallPic = Sprite::create("aim/forest512.jpg");
 	
-	//back->setPosition(visibleSize / 2);
-	//addChild(back);
-	// ½ØÈ¡Ğ¡Í¼
-	//auto clipSmall = ClippingNode::create();
-	//
-	//clipSmall->setPosition(visibleSize / 2);
-	//auto aimArea = Sprite::create("aim/sniperscopeA.png");
-	//clipSmall->addChild(smallPic);
-	//clipSmall->setStencil(aimArea);
-	//clipSmall->setAlphaThreshold(0.5);
-	//clipSmall->setInverted(true);
 
-	//addChild(clipSmall);
-
-
-	//// ½ØÈ¡´óÍ¼
-	//auto  biPic = Sprite::create("aim/forest2048.jpg");
-	//auto clipBi = ClippingNode::create();
-
-	//clipBi->setPosition(visibleSize / 2);
-	//auto aimAreaBi = Sprite::create("aim/aimAreaA.png");
-	//clipBi->addChild(biPic);
-	//clipBi->setStencil(aimAreaBi);
-	//clipBi->setAlphaThreshold(0.5);
-	//clipBi->setInverted(false);
-	//addChild(clipBi);
-	//// Ãé×¼¾µÊµÏÖÂß¼­:  ¹â±êÔÚĞ¡Í¼ÉÏÒÆ¶¯,½«¹â±êµ±Ç°Î»ÖÃµÄĞ¡Í¼½ØÈ¡Ê¹ÓÃ´óÍ¼½ØÈ¡µÄÕÚ¸Ç
-
-	//auto listener = EventListenerTouchOneByOne::create();
-	//listener->setSwallowTouches(true);
-	//listener->onTouchBegan = [=](Touch * touch, Event *event) {
-
-	//	return true;
-	//};
-	//listener->onTouchMoved = [=](Touch * touch,Event *event) {
-	//	auto target = static_cast<Sprite *>(event->getCurrentTarget());
-	//	Point touchLocation = touch->getLocation();
-	//	Point locationNode = target->getContentSize();
-	//	log("touchDelata:%f,%f",touch->getDelta().x,touch->getDelta().y);
-	//	aimArea->setPosition(aimArea->getPosition()+touch->getDelta());
-	//	biPic->setPosition(biPic->getPosition() - touch->getDelta() * 3);
-	//	aimAreaBi->setPosition(aimAreaBi->getPosition() + touch->getDelta());
-	//	
-	//	//aimAreaBi->setPosition(1,1);
-	//	
-	//	return true;
-
-
-	//};
-	//Director::getInstance()->getEventDispatcher()->
-	//	addEventListenerWithSceneGraphPriority(listener, smallPic);
-
-
-	//1, ÖØÁ¦ Ğ¡ÇòÏÂÂä²»¶Ï·´µ¯********************
+	//1, é‡åŠ› å°çƒä¸‹è½ä¸æ–­åå¼¹********************
 
         auto rootNode = CSLoader::createNode("MainScene.csb");
 		Sprite * edgeBox = dynamic_cast<Sprite*>(rootNode->getChildByName("Default"));
@@ -257,12 +60,12 @@ bool HelloWorld::init()
 		addChild(rootNode);
 		auto redBall = rootNode->getChildByName("redBall");
 		auto ballBody = PhysicsBody::createCircle(20, PHYSICS_MATERIAL2);
-		ballBody->setDynamic(true);// ÉèÖÃ²»¹Ì¶¨
+		ballBody->setDynamic(true);// è®¾ç½®ä¸å›ºå®š
 		redBall->setPhysicsBody(ballBody);
-// 2,Ğ¡ÇòĞ±Å×
+// 2,å°çƒæ–œæŠ›
 		/*ballBody->setVelocity(Vec2(-1000, 1000));
 		ballBody->setVelocityLimit(600);*/
-// 3,Ğ¡Äñ·ÉĞĞ,¿Õ¸ñÏòÉÏ·É,ÆË¶¯³á°ò,ËÉ¿ªÏÂÂä  *******************
+// 3,å°é¸Ÿé£è¡Œ,ç©ºæ ¼å‘ä¸Šé£,æ‰‘åŠ¨ç¿…è†€,æ¾å¼€ä¸‹è½  *******************
 		//auto bird = Sprite::create("myBird.png",Rect(0, 0, 130, 100));
 		//bird->setPosition(origin.x+bird->getContentSize().width,origin.y+540);
 		//auto birdBody = PhysicsBody::createEdgeBox(bird->getContentSize(), PHYSICS_MATERIAL2,3);
@@ -272,7 +75,7 @@ bool HelloWorld::init()
 		//bird->runAction(RepeatForever::create(toRight));
 
 		//addChild(bird);
-		//// ·ÉĞĞ¶¯»­
+		//// é£è¡ŒåŠ¨ç”»
 		//Vector<SpriteFrame *> frames(2);
 		//frames.pushBack(Sprite::create("myBird.png", Rect(0, 0, 130, 100))->getSpriteFrame());
 		//frames.pushBack(Sprite::create("myBird.png", Rect(130, 0, 130, 100))->getSpriteFrame());
@@ -304,10 +107,10 @@ bool HelloWorld::init()
 		//Director::getInstance()->getEventDispatcher()->
 		//	addEventListenerWithSceneGraphPriority(listener, this);
 
-		//4 ,Ì¨Çò,ºìÇòÎ»ÓÚÖĞÑë,Ä¦²ÁÏµÊı10000
-		// ¸øÇóÒ»¸öËÙ¶ÈÈÃÇòÔË¶¯
+		//4 ,å°çƒ,çº¢çƒä½äºä¸­å¤®,æ‘©æ“¦ç³»æ•°10000
+		// ç»™æ±‚ä¸€ä¸ªé€Ÿåº¦è®©çƒè¿åŠ¨
 	//	ballBody->setVelocity(Vec2(200, 0));
-// 5,·ç³µ×ª¶¯,Ëæ»úÊ©¼Ó×èÁ¦
+// 5,é£è½¦è½¬åŠ¨,éšæœºæ–½åŠ é˜»åŠ›,è¿™é‡Œæ²¡æœ‰ä½¿ç”¨éšæœºæ•°,ä¸»è¦æ˜¯åœ¨å®šæ—¶å™¨ä¸­å†³å®šæ˜¯å¦ç»™é£è½¦äº‹å‡è§’é€Ÿåº¦é˜»åŠ›
 
 	Sprite * phnwheel=	dynamic_cast<Sprite *>(rootNode->getChildByName("pinwheel"));
 	//phnwheel->runAction(RepeatForever::create(RotateBy::create(3, 360)));
@@ -327,13 +130,13 @@ void HelloWorld::myCallback(float dt) {
 	if (m_lTimer > m_maxTime) {
 		m_maxTime = 1;
 	}
-	//¸øËÙ¶È
+	//ç»™é€Ÿåº¦
 	if (m_lTimer % 17 == 0) {
 		pinwheelBody->setAngularVelocity(-6);
 		pinwheelBody->setAngularDamping(0);
 		log("hello  speed");
 	}
-	////¸ø×èÁ¦
+	////ç»™é˜»åŠ›
 	if (m_lTimer % 13 == 0) {
 		pinwheelBody->setAngularDamping(0.5);
 		log("damping");
