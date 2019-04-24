@@ -24,58 +24,7 @@ Scene* HelloWorld::createScene()
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-    /**  you can create scene with following comment code instead of using csb file.
-    // 1. super init first
-    if ( !Layer::init() )
-    {
-        return false;
-    }
-    
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-
-    // add a "close" icon to exit the progress. it's an autorelease object
-    auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
-                                           "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
-    
-	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2));
-
-    // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
-    
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    **/
+  
     
     //////////////////////////////
     // 1. super init first
@@ -92,7 +41,7 @@ bool HelloWorld::init()
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 
-	//  1.ÎÄ×Ö²Ëµ¥*****************************************************************
+	//  1.æ–‡å­—èœå•*****************************************************************
 	/*MenuItemFont::setFontName("Times New Rowman");
 	MenuItemFont::setFontSize(80);
 
@@ -105,7 +54,7 @@ bool HelloWorld::init()
 	auto menu = Menu::create(item1, item2, NULL);
 	menu->alignItemsVertically();
 	addChild(menu);*/
-	//2. checkbox ÀàĞÍ²Ëµ¥(¿ª¹Ø)
+	//2. checkbox ç±»å‹èœå•(å¼€å…³)
 	//auto lightOn = MenuItemImage::create("OnA.png", "OnA.png");
 	//auto lightOff = MenuItemImage::create("signalLight.png", "signalLight.png");
 	//auto onOffMenu = MenuItemToggle::createWithCallback([=](Ref * pSend) {
@@ -124,7 +73,7 @@ bool HelloWorld::init()
 	//addChild(menu, 2);
 
 
-	// 3, Í¼Æ¬²Ëµ¥*****************************************************************//
+	// 3, å›¾ç‰‡èœå•*****************************************************************//
 	/*auto  mi1 = MenuItemImage::create("img1n.png", "img1s.png", "img1d.png",
 		[=](Ref * pSend){
 		log("IMG1 ok!");
@@ -138,7 +87,7 @@ bool HelloWorld::init()
 	mi2->setPosition(0, 200);
 	auto menu = Menu::create(mi1, mi2, NULL);
 	addChild(menu, 2);*/
-	// 4 sprite ²Ëµ¥,¿ÉÒÔÉèÖÃ¶¯»­  *****************************************************************
+	// 4 sprite èœå•,å¯ä»¥è®¾ç½®åŠ¨ç”»  *****************************************************************
 	//auto plane1N = Sprite::create("planen1.png");
 	//auto plane1S = Sprite::create("planeS1.png");
 	//auto plane1D = Sprite::create("planed1.png");
@@ -153,7 +102,7 @@ bool HelloWorld::init()
 	//
 	//auto menu = Menu::create(item1, NULL);
 	//addChild(menu);
-	//// ¼ÓÉÏ¶¯»­
+	//// åŠ ä¸ŠåŠ¨ç”»
 	//Vector<SpriteFrame *>framesN(2);
 	//framesN.pushBack(Sprite::create("planen1.png")->getSpriteFrame());
 	//framesN.pushBack(Sprite::create("planen2.png")->getSpriteFrame());
@@ -168,9 +117,9 @@ bool HelloWorld::init()
 	//	Animate::create(Animation::createWithSpriteFrames(framesS, 0.07))));
 
 
-	// ²Ã¼ô½ÚµãÀà
-	// µ¯¿×Ğ§¹û
-	//auto clip = ClippingNode::create();// ²Ã¼ô½Úµã
+	// è£å‰ªèŠ‚ç‚¹ç±»
+	// å¼¹å­”æ•ˆæœ
+	//auto clip = ClippingNode::create();// è£å‰ªèŠ‚ç‚¹
 	//auto plate = Sprite::create("holes/ABCD.png");
 	//auto hole = Sprite::create("holes/Hole.png");
 	//auto point = Sprite::create("holes/Point.png");
@@ -178,19 +127,19 @@ bool HelloWorld::init()
 	//clip->addChild(plate);
 	//clip->addChild(hole);
 
-	//clip->setStencil(point);//°´ÕÕpointµÄÄ£Ñù¿ÙÍ¼
+	//clip->setStencil(point);//æŒ‰ç…§pointçš„æ¨¡æ ·æŠ å›¾
 	//clip->setAlphaThreshold(0.5);
 	//clip->setInverted(true);
 	//addChild(clip);
 
 
-	// Ãé×¼¾µ
-	// ¿ª :Ê¹ÓÃ´óÍ¼
+	// ç„å‡†é•œ
+	// å¼€ :ä½¿ç”¨å¤§å›¾
 	auto smallPic = Sprite::create("aim/forest512.jpg");
 	
 	//back->setPosition(visibleSize / 2);
 	//addChild(back);
-	// ½ØÈ¡Ğ¡Í¼
+	// æˆªå–å°å›¾
 	auto clipSmall = ClippingNode::create();
 	
 	clipSmall->setPosition(visibleSize / 2);
@@ -203,7 +152,7 @@ bool HelloWorld::init()
 	addChild(clipSmall);
 
 
-	// ½ØÈ¡´óÍ¼
+	// æˆªå–å¤§å›¾
 	auto  biPic = Sprite::create("aim/forest2048.jpg");
 	auto clipBi = ClippingNode::create();
 
@@ -214,7 +163,7 @@ bool HelloWorld::init()
 	clipBi->setAlphaThreshold(0.5);
 	clipBi->setInverted(false);
 	addChild(clipBi);
-	// Ãé×¼¾µÊµÏÖÂß¼­:  ¹â±êÔÚĞ¡Í¼ÉÏÒÆ¶¯,½«¹â±êµ±Ç°Î»ÖÃµÄĞ¡Í¼½ØÈ¡Ê¹ÓÃ´óÍ¼½ØÈ¡µÄÕÚ¸Ç
+	// ç„å‡†é•œå®ç°é€»è¾‘:  å…‰æ ‡åœ¨å°å›¾ä¸Šç§»åŠ¨,å°†å…‰æ ‡å½“å‰ä½ç½®çš„å°å›¾æˆªå–ä½¿ç”¨å¤§å›¾æˆªå–çš„é®ç›–
 
 	auto listener = EventListenerTouchOneByOne::create();
 	listener->setSwallowTouches(true);
