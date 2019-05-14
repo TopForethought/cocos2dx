@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="10" tilewidth="64" tileheight="64">
+ <tileset firstgid="1" name="towerBlocks" tilewidth="64" tileheight="64">
+  <image source="../../../../C++WORKSPACEE/tiled0102/towerBlocks.png" width="512" height="512"/>
+ </tileset>
+ <layer name="块层 1" width="20" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjZIAAQSAWYkAFwkAsAsSiDMQDRigtCcRSaHLSQCwDxLJkmEctgM08RhyYEvOIERtu5skBsTwQKzAQH5aE3KIOxBpIfGQ7cJlHalzC7MCmDwBgVQJl
+  </data>
+ </layer>
+ <objectgroup name="monster" visible="0"/>
+ <objectgroup name="meta">
+  <object x="44" y="28">
+   <ellipse/>
+  </object>
+  <object x="16" y="610.667">
+   <ellipse/>
+  </object>
+  <object x="53.3333" y="617.333">
+   <ellipse/>
+  </object>
+  <object x="332" y="606.667">
+   <ellipse/>
+  </object>
+  <object x="372" y="589.333">
+   <ellipse/>
+  </object>
+  <object x="349.333" y="229.333">
+   <ellipse/>
+  </object>
+  <object x="368" y="213.333">
+   <ellipse/>
+  </object>
+  <object x="648" y="208">
+   <ellipse/>
+  </object>
+  <object x="685.333" y="248">
+   <ellipse/>
+  </object>
+  <object x="674.667" y="358.667">
+   <ellipse/>
+  </object>
+  <object x="680" y="473.333">
+   <ellipse/>
+  </object>
+  <object x="693.333" y="488">
+   <ellipse/>
+  </object>
+  <object x="738.667" y="490.667">
+   <ellipse/>
+  </object>
+  <object x="862.667" y="490.667">
+   <ellipse/>
+  </object>
+  <object x="878.667" y="525.333">
+   <ellipse/>
+  </object>
+  <object x="877.333" y="553.333">
+   <ellipse/>
+  </object>
+  <object x="877.333" y="582.667">
+   <ellipse/>
+  </object>
+  <object x="894.667" y="608" width="1.33333">
+   <ellipse/>
+  </object>
+  <object x="897.333" y="606.667">
+   <ellipse/>
+  </object>
+  <object x="938.667" y="606.667">
+   <ellipse/>
+  </object>
+  <object x="986.667" y="610.667">
+   <ellipse/>
+  </object>
+  <object x="1056" y="608">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>

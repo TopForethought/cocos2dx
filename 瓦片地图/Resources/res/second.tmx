@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="mapBlock" tilewidth="32" tileheight="32">
+  <image source="../../C++WORKSPACEE/tiled0102/towerBlocks.png" width="512" height="512"/>
+ </tileset>
+ <tileset firstgid="257" name="Monster" tilewidth="85" tileheight="85">
+  <image source="../../C++WORKSPACEE/tiled0102/Monster.png" width="85" height="85"/>
+ </tileset>
+ <layer name="块层 1" width="30" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzTsKwkAURuEJooUWQlpXYXAFVtYqUVOq+IpJoUJ8Z+s5wghpDJiMN4L+8MFwizlKlTcr9W6ijwGGAt2OVscUM8yFuzvscRDuPtdA7UOyuq3U3bRv7zroGuC82e2p4qui/UNdVbDrYoQxJvCEugssscIaG6HuYxGOOOEs2M27f7fcro2KZhvo+tgiQJjRfSVv94Irbrgj1v8l5RMzYg==
+  </data>
+ </layer>
+ <objectgroup name="moster" visible="0"/>
+ <objectgroup name="walk">
+  <object x="99" y="101">
+   <ellipse/>
+  </object>
+  <object x="73" y="625">
+   <ellipse/>
+  </object>
+  <object x="98" y="651">
+   <ellipse/>
+  </object>
+  <object x="260" y="649">
+   <ellipse/>
+  </object>
+  <object x="293" y="633">
+   <ellipse/>
+  </object>
+  <object x="283" y="226">
+   <ellipse/>
+  </object>
+  <object x="319" y="177">
+   <ellipse/>
+  </object>
+  <object x="884" y="175">
+   <ellipse/>
+  </object>
+  <object x="935" y="203">
+   <ellipse/>
+  </object>
+ </objectgroup>
+</map>
